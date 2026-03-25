@@ -323,3 +323,7 @@ Releases and downloads (second mention)
 
 End of documentation
 - The documentation ends here with a focus on clarity, practical guidance, and a healthy respect for motion as a tool for better user experiences.
+
+## Links
+
+[![Hypercommit](https://img.shields.io/badge/Hypercommit-DB2475)](https://hypercommit.com/swiftui-animation-masterclass)
